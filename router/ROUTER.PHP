@@ -8,6 +8,10 @@ namespace Harmony2\Router;
  */
 abstract class Router
 {
+
+	const METHOD_POST = 'POST';
+	const METHOD_GET = 'GET';
+
 	/**
 	 * Liste des routes qui ont été définies
 	 *
