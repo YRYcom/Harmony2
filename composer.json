@@ -1,0 +1,26 @@
+{
+  "name": "yrycom/harmony",
+  "description": "Harmony",
+  "homepage": "http://www.yrycom.com",
+  "keywords": [
+    "yrycom",
+    "yrycom harmony"
+  ],
+  "license": "no usage restriction",
+  "require": {    
+  },
+  "autoload": {
+    "psr-4": {
+      "Harmony2\\": "/"
+    }
+  },
+  "authors": [
+    {
+      "name": "YRYcom",
+      "email": "contact@yrycom.com",
+      "homepage": "http://www.yrycom.com",
+      "role": "Developer"
+
+    }
+  ]
+}
