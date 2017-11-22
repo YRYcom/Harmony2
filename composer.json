@@ -1,10 +1,11 @@
 {
-  "name": "yrycom/harmony",
-  "description": "Harmony",
+  "name": "yrycom/harmony2",
+  "description": "Harmony2 PHP Framework",
   "homepage": "http://www.yrycom.com",
   "keywords": [
     "yrycom",
-    "yrycom harmony"
+	"harmony2",
+    "yrycom harmony2"
   ],
   "license": "no usage restriction",
   "require": {    
