@@ -1,0 +1,22 @@
+<?php
+
+namespace Lib;
+
+abstract class Entity
+{
+    public function __construct(Array $fields = [])
+    {
+        if(!empty($fields))
+            $this->hydrate($fields);
+    }
+
+    public function hydrate(Array $fields)
+    {
+        $properties = get_object_vars($this);
+
+        foreach($fields as $k => $v) {
+            if(array_key_exists($k, $properties))
+                $this->$k = $v;
+        }
+    }
+}

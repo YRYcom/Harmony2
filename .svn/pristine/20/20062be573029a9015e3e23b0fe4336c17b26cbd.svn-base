@@ -1,0 +1,40 @@
+<?php
+
+namespace Lib;
+
+use Lib\Http\APIRequest as Request;
+use Lib\Http\APIResponse as Response;
+
+abstract class Controller
+{
+    /**
+     * @var \Lib\Http\APIRequest
+     */
+    private $request;
+    /**
+     * @var \Lib\Http\APIResponse
+     */
+    private $response;
+
+    public function __construct(Request $request, Response $response)
+    {
+        $this->request = $request;
+        $this->response = $response;
+    }
+
+    /**
+     * @return \Lib\Http\APIRequest
+     */
+    public function getRequest()
+    {
+        return $this->request;
+    }
+
+    /**
+     * @return \Lib\Http\APIResponse
+     */
+    public function getResponse()
+    {
+        return $this->response;
+    }
+}

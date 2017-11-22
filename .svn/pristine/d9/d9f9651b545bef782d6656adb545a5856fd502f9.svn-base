@@ -1,0 +1,40 @@
+<?php
+
+namespace Lib\Router;
+
+/**
+ * Gestion des routes de l'API
+ * -------
+ */
+abstract class Router
+{
+    /**
+     * Liste des routes qui ont été définies
+     *
+     * @var array
+     */
+    private static $routes = [];
+
+    /**
+     * Permet d'enregistrer la correspondance entre une route et un contrôleur
+     *
+     * @param string $pattern    Pattern à utiliser en tant que REGEXP sur l'URL
+     * @param string $controller La classe contrôleur à utiliser
+     * @param string $action     La méthode du contrôleur à appeler
+     * @param string $method     La méthode HTTP associée à la route
+     */
+    public static function register($pattern, $controller, $action, $method = 'GET')
+    {
+        self::$routes[] = new Route($pattern, $controller, $action, $method);
+    }
+
+    /**
+     * Retourne toutes les routes définies
+     *
+     * @return array
+     */
+    public static function getRoutes()
+    {
+        return self::$routes;
+    }
+}
