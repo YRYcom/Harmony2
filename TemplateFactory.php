@@ -47,6 +47,9 @@ class TemplateFactory
 		if(self::$_init == false)
 			return true;
 
+		if(!is_array(self::$_provider))
+			return true;
+
 		foreach (self::$_provider as $pattern => $classnames) {
 			if (self::check($pattern, $filename)) {
 				foreach ($classnames as $classname) {
